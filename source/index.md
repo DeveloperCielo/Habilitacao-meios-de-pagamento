@@ -40,20 +40,42 @@ Neste meio de pagamento os dados do consumidor são digitados diretamente no amb
 
 ## Bradesco
 
-Os critérios para habilitar a opção de Boleto Bradesco Com. Eletrônico são:
+Os critérios para utilizar o Boleto Bradesco Com. Eletrônico são:
 
 * Ser correntista Bradesco Pessoa Jurídica;
 * Contatar o gerente de conta Bradesco para assinar contrato específico do Comércio Eletrônico.
 
-Para solicitar o Boleto Bradesco, você precisa:
+Para solicitar/configurar o Boleto Bradesco, você precisa:
 
 1. Contatar o banco/agência e fazer a solicitação de boleto com registro carteira 26. Esse passo envolve assinatura de contrato com o Banco.
-2. Receber um e-mail do Banco com login e senha de acesso ao ambiente Bradesco e acessar a página do Gerenciador WEB (fornecida no e-mail).
-3. Cadastrar as URL’s abaixo utilizadas nas trocas de informação entre Checkout e o Bradesco.
-   * **URL de Resposta**: [https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost](https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost)
-   * **URL de Falha**: [https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost](https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost)
-   * **URL de Redirecionamento**: [https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost](https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost)
-4. Encaminhar um e-mail para Cielo e-Commerce [mailto:cieloecommerce@cielo.com.br](cieloecommerce@cielo.com.br) com os seguintes dados:
+2. Receber um e-mail do Banco (Kit Scopus) com URL do gerenciador, e-mail de login e senha de acesso ao ambiente Bradesco.  Você deve acessar o ambiente Bradesco pela URL do gerenciador. Veja os exemplos enviados no email (Kit Scopus):
+    * **URL do gerenciador** - (https://meiosdepagamentobradesco.com.br/gerenciador/login.jsp)
+    * **E-mail de Login**
+    * **Senha de acesso**
+3. No ambiente Bradesco, acesse as abas CONFIGURAÇÕES > MEIOS DE PAGAMENTO > BOLETO e preencha os seguintes dados:
+    * **Habilitar "frase" do boleto**: Inativo
+    * **Habilitar "referência" do boleto**: Ativo
+    * **Apresentar Agência e Conta**: Inativo
+    * **Vencimento**: 5 dias 
+  obs: O vencimento deverá ser o mesmo configurado no Checkout Cielo.
+    * **URL de notificação**: https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost
+    * No campo **Chave de Segurança** clique em "Gerar chave de segurança"
+    * **Endereço de IP da loja**  (numérico)
+Para os campos de **URL de resposta, URL de falha e URL de redirecionamento**, inserir o seguinte link: https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost
+4. Inserir o Parâmetro de Comunicação abaixo em cada um dos três Paramêtros a seguir: 
+
+* **Paramêtro de Comunicação**
+`numOrder=[%lid_m%]&merchantid=[%merchantid%]&cod=[%errorcod%]&cctype=[%cctype%]&ccname=[%ccname%]&ccemail=[%ccemail%]&numparc=[%numparc%]&valparc=[%valparc%]&valtotal=[%valtotal%]&prazo=[%prazo%]&comb=[%comb%]&assinatura=[%assinatura%]&`
+
+    * **Parâmetro de notificação**: 
+    * **Parâmetro de confirmação**:
+    * **Parâmetro de falha**:
+OBS: Não podem existir espaços ou quebras de texto nos parâmetros expostos acima.
+5.  Clique no botão **Gravar todas as configurações realizadas**
+
+Concluída essa etapa, você deve: 
+
+1. Encaminhar um e-mail para Cielo e-Commerce [mailto:cieloecommerce@cielo.com.br](cieloecommerce@cielo.com.br) com os seguintes dados:
    * **Agência**: 0000
    * **Conta**: 0000-0
    * **Convênio**: 000000
@@ -61,9 +83,10 @@ Para solicitar o Boleto Bradesco, você precisa:
    * **Vencimento** (contado em dias):
    * **Conciliação** (Afiliação do Bradesco):
        * Exemplo de Conciliação: 004601478
-   * **Assinatura** (Bradesco): 
-       * Exemplo de Assinatura: `ZDE50B48D41D59BDD1562CC2A48546454ZC149308CBD283E0E49210C57958A6A38A068A3ZZA8B075095A1B9E1DEAZB64BF1682C5610ZC8285DC8630FA6E300FA00B9D43054C84ACA958ZCFB435CF5A27ZC440637777EBAFEED1BCZDCA82D5778B266B3BB4E90774302D56A0C7EDZZ1A532A51F7A889DA83AEFA08CA4E91A08Z2`
-5. O Cielo e-Commerce confirmará, em até 3 dias, a habilitação do boleto como forma de pagamento da sua loja online.
+OBS: A afiliação do Bradesco está localizada no topo do gerenciador web.
+   * **Chave de Segurança** (Bradesco):
+       * Exemplo de Chave de Segurança: `ZDE50B48D41D59BDD1562CC2A48546454ZC149308CBD283E0E49210C57958A6A38A068A3ZZA8B075095A1B9E1DEAZB64BF1682C5610ZC8285DC8630FA6E300FA00B9D43054C84ACA958ZCFB435CF5A27ZC440637777EBAFEED1BCZDCA82D5778B266B3BB4E90774302D56A0C7EDZZ1A532A51F7A889DA83AEFA08CA4E91A08Z2`
+2. O Cielo e-Commerce confirmará, em até 3 dias, a inclusão do boleto como forma de pagamento da sua loja online.
 
 ## Banco do Brasil
 
