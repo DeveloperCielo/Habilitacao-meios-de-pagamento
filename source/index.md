@@ -57,23 +57,26 @@ Para solicitar/configurar o Boleto Bradesco, você precisa:
     * **Habilitar "referência" do boleto**: Ativo
     * **Apresentar Agência e Conta**: Inativo
     * **Vencimento**: 5 dias 
-  obs: O vencimento deverá ser o mesmo configurado no Checkout Cielo.
-
     * **URL de notificação**: https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost
-    * No campo **Chave de Segurança** clique em "Gerar chave de segurança"
+    * **No campo **Chave de Segurança** clique em "Gerar chave de segurança"
     * **Endereço de IP da loja**  (numérico)
   
-Para os campos de **URL de resposta, URL de falha e URL de redirecionamento**, inserir o seguinte link: https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost
-4. Inserir o Parâmetro de Comunicação abaixo em cada um dos três Paramêtros a seguir: 
+obs: O vencimento deverá ser o mesmo configurado no Checkout Cielo.
 
-* **Paramêtro de Comunicação**
-`numOrder=[%lid_m%]&merchantid=[%merchantid%]&cod=[%errorcod%]&cctype=[%cctype%]&ccname=[%ccname%]&ccemail=[%ccemail%]&numparc=[%numparc%]&valparc=[%valparc%]&valtotal=[%valtotal%]&prazo=[%prazo%]&comb=[%comb%]&assinatura=[%assinatura%]&`
+Para os campos de **URL de resposta, URL de falha e URL de redirecionamento**, inserir o seguinte link: `https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost`
+
+4. Em cada um dos três Paramêtros a seguir, preencher com o Parâmetro de Comunicação abaixo
 
     * **Parâmetro de notificação**: 
     * **Parâmetro de confirmação**:
     * **Parâmetro de falha**:
+
+* **Paramêtro de Comunicação**
+`numOrder=[%lid_m%]&merchantid=[%merchantid%]&cod=[%errorcod%]&cctype=[%cctype%]&ccname=[%ccname%]&ccemail=[%ccemail%]&numparc=[%numparc%]&valparc=[%valparc%]&valtotal=[%valtotal%]&prazo=[%prazo%]&comb=[%comb%]&assinatura=[%assinatura%]&`
+
 OBS: Não podem existir espaços ou quebras de texto nos parâmetros expostos acima.
-5.  Clique no botão **Gravar todas as configurações realizadas**
+
+5. Clique no botão "**Gravar todas as configurações realizadas**"
 
 Concluída essa etapa, você deve: 
 
