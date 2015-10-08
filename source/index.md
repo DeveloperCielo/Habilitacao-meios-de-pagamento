@@ -58,14 +58,14 @@ Para solicitar/configurar o Boleto Bradesco, você precisa:
     * **Apresentar Agência e Conta**: Inativo
     * **Vencimento**: 5 dias 
     * **URL de notificação**: https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost
-    * **No campo **Chave de Segurança** clique em "Gerar chave de segurança"
+    * No campo **Chave de Segurança** clique em "**Gerar chave de segurança**"
     * **Endereço de IP da loja**  (numérico)
   
 obs: O vencimento deverá ser o mesmo configurado no Checkout Cielo.
 
 Para os campos de **URL de resposta, URL de falha e URL de redirecionamento**, inserir o seguinte link: `https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost`
 
-4. Em cada um dos três Paramêtros a seguir, preencher com o Parâmetro de Comunicação abaixo
+4.Em cada um dos três Paramêtros a seguir, preencher com o Parâmetro de Comunicação abaixo
 
     * **Parâmetro de notificação**: 
     * **Parâmetro de confirmação**:
@@ -76,7 +76,7 @@ Para os campos de **URL de resposta, URL de falha e URL de redirecionamento**, i
 
 OBS: Não podem existir espaços ou quebras de texto nos parâmetros expostos acima.
 
-5. Clique no botão "**Gravar todas as configurações realizadas**"
+5.Clique no botão "**Gravar todas as configurações realizadas**"
 
 Concluída essa etapa, você deve: 
 
@@ -91,6 +91,7 @@ Concluída essa etapa, você deve:
 OBS: A afiliação do Bradesco está localizada no topo do gerenciador web.
    * **Chave de Segurança** (Bradesco):
        * Exemplo de Chave de Segurança: `ZDE50B48D41D59BDD1562CC2A48546454ZC149308CBD283E0E49210C57958A6A38A068A3ZZA8B075095A1B9E1DEAZB64BF1682C5610ZC8285DC8630FA6E300FA00B9D43054C84ACA958ZCFB435CF5A27ZC440637777EBAFEED1BCZDCA82D5778B266B3BB4E90774302D56A0C7EDZZ1A532A51F7A889DA83AEFA08CA4E91A08Z2`
+
 2. O Cielo e-Commerce confirmará, em até 3 dias, a inclusão do boleto como forma de pagamento da sua loja online.
 
 ## Banco do Brasil
