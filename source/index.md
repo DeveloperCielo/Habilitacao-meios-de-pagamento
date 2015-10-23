@@ -55,56 +55,60 @@ Para solicitar/configurar o Boleto Bradesco, você precisa:
 
 Para configurar o Boleto:
 
-1. No ambiente Bradesco, acesse as abas CONFIGURAÇÕES > MEIOS DE PAGAMENTO > BOLETO e preencha os seguintes dados:
-    * **Habilitar "frase" do boleto**: Inativo
-    * **Habilitar "referência" do boleto**: Ativo
-    * **Apresentar Agência e Conta**: Inativo
-    * **Vencimento**: 5 dias
-    * **URL de notificação**: https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost
-    * No campo **Chave de Segurança** clique em "**Gerar chave de segurança**"
-    * **Endereço de IP da loja**  (numérico)
+**1.** No ambiente Bradesco, acesse as abas CONFIGURAÇÕES > MEIOS DE PAGAMENTO > BOLETO e preencha os seguintes dados:
+
+* **Habilitar "frase" do boleto**: Inativo
+* **Habilitar "referência" do boleto**: Ativo
+* **Apresentar Agência e Conta**: Inativo
+* **Vencimento**: 5 dias
 
 ![Boleto Bradesco](/images/boleto-bradesco-passo-2.png)
 
 <aside class="notice"><strong>Obs:</strong> O vencimento deverá ser o mesmo configurado no Checkout Cielo.</aside>
 
-Para os campos de **URL de resposta, URL de falha e URL de redirecionamento**, inserir o seguinte link: `https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost`
-
-2.Em cada um dos três Paramêtros a seguir, preencher com o Parâmetro de Comunicação abaixo:
-
-* **Parâmetro de notificação**:
-* **Parâmetro de confirmação**:
-* **Parâmetro de falha**:
+* **URL de notificação**: https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost
+* No campo **Chave de Segurança** clique em "**Gerar chave de segurança**"
+* **Endereço de IP da loja**  (numérico)
+* Para os campos de **URL de resposta, URL de falha e URL de redirecionamento**, inserir o seguinte link: `https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost`
 
 ![Boleto Bradesco](/images/boleto-bradesco-passo-3.png)
 
+**2.** Em cada um dos três Paramêtros a seguir, preencher com o Parâmetro de Comunicação abaixo:
+
+* **Parâmetro de notificação**:
+    * `numOrder=[%lid_m%]&merchantid=[%merchantid%]&cod=[%errorcod%]&cctype=[%cctype%]&ccname=[%ccname%]&ccemail=[%ccemail%]&numparc=[%numparc%]&valparc=[%valparc%]&valtotal=[%valtotal%]&prazo=[%prazo%]&comb=[%comb%]&assinatura=[%assinatura%]&`
+* **Parâmetro de confirmação**:
+    * `numOrder=[%lid_m%]&merchantid=[%merchantid%]&cod=[%errorcod%]&cctype=[%cctype%]&ccname=[%ccname%]&ccemail=[%ccemail%]&numparc=[%numparc%]&valparc=[%valparc%]&valtotal=[%valtotal%]&prazo=[%prazo%]&comb=[%comb%]&assinatura=[%assinatura%]&`
+* **Parâmetro de falha**:
+    * `numOrder=[%lid_m%]&merchantid=[%merchantid%]&cod=[%errorcod%]&cctype=[%cctype%]&ccname=[%ccname%]&ccemail=[%ccemail%]&numparc=[%numparc%]&valparc=[%valparc%]&valtotal=[%valtotal%]&prazo=[%prazo%]&comb=[%comb%]&assinatura=[%assinatura%]&`
 * **Paramêtro de Comunicação**
-    `numOrder=[%lid_m%]&merchantid=[%merchantid%]&cod=[%errorcod%]&cctype=[%cctype%]&ccname=[%ccname%]&ccemail=[%ccemail%]&numparc=[%numparc%]&valparc=[%valparc%]&valtotal=[%valtotal%]&prazo=[%prazo%]&comb=[%comb%]&assinatura=[%assinatura%]&`
+    * `numOrder=[%lid_m%]&merchantid=[%merchantid%]&cod=[%errorcod%]&cctype=[%cctype%]&ccname=[%ccname%]&ccemail=[%ccemail%]&numparc=[%numparc%]&valparc=[%valparc%]&valtotal=[%valtotal%]&prazo=[%prazo%]&comb=[%comb%]&assinatura=[%assinatura%]&`
 
 ![Boleto Bradesco](/images/boleto-bradesco-passo-4.png)
 
 <aside class="notice"><strong>Obs:</strong> Não podem existir espaços ou quebras de texto nos parâmetros expostos acima.</aside>
 
-5.Clique no botão "**Gravar todas as configurações realizadas**"
+**3.** Clique no botão "**Gravar todas as configurações realizadas**"
 
-Concluída essa etapa, você deve:
+### Concluída essa etapa, você deve:
 
-1. Encaminhar um e-mail para Cielo e-Commerce [mailto:cieloecommerce@cielo.com.br](cieloecommerce@cielo.com.br) com os seguintes dados:
-   * **Agência**: 0000
-   * **Conta**: 0000-0
-   * **Convênio**: 000000
-   * **Carteira**: 26 – COM REGISTRO
-   * **Vencimento** (contado em dias):
-   * **Conciliação** (Afiliação do Bradesco):
-       * Exemplo de Conciliação: 004601478
-   * **Chave de Segurança** (Bradesco):
-       * Exemplo de Chave de Segurança: `ZDE50B48D41D59BDD1562CC2A48546454ZC149308CBD283E0E49210C57958A6A38A068A3ZZA8B075095A1B9E1DEAZB64BF1682C5610ZC8285DC8630FA6E300FA00B9D43054C84ACA958ZCFB435CF5A27ZC440637777EBAFEED1BCZDCA82D5778B266B3BB4E90774302D56A0C7EDZZ1A532A51F7A889DA83AEFA08CA4E91A08Z2`
+**1.** Encaminhar um e-mail para Cielo e-Commerce [mailto:cieloecommerce@cielo.com.br](cieloecommerce@cielo.com.br) com os seguintes dados:
+
+* **Agência**: 0000
+* **Conta**: 0000-0
+* **Convênio**: 000000
+* **Carteira**: 26 – COM REGISTRO
+* **Vencimento** (contado em dias):
+* **Conciliação** (Afiliação do Bradesco):
+   * Exemplo de Conciliação: 004601478
+* **Chave de Segurança** (Bradesco):
+   * Exemplo de Chave de Segurança: `ZDE50B48D41D59BDD1562CC2A48546454ZC149308CBD283E0E49210C57958A6A38A068A3ZZA8B075095A1B9E1DEAZB64BF1682C5610ZC8285DC8630FA6E300FA00B9D43054C84ACA958ZCFB435CF5A27ZC440637777EBAFEED1BCZDCA82D5778B266B3BB4E90774302D56A0C7EDZZ1A532A51F7A889DA83AEFA08CA4E91A08Z2`
 
 <aside class="notice"><strong>Obs:</strong> A afiliação do Bradesco está localizada no topo do gerenciador web.</aside>
 
 ![Boleto Bradesco](/images/boleto-bradesco-passo-5.png)
 
-2. O Cielo e-Commerce confirmará, em até 3 dias, a inclusão do boleto como forma de pagamento da sua loja online.
+**2.** O Cielo e-Commerce confirmará, em até 3 dias, a inclusão do boleto como forma de pagamento da sua loja online.
 
 ## Banco do Brasil
 
