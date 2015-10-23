@@ -127,51 +127,62 @@
 
 <p>Para configurar o Boleto:</p>
 
-<ol>
-<li>No ambiente Bradesco, acesse as abas CONFIGURAÇÕES &gt; MEIOS DE PAGAMENTO &gt; BOLETO e preencha os seguintes dados:
+<p><strong>1.</strong> No ambiente Bradesco, acesse as abas CONFIGURAÇÕES &gt; MEIOS DE PAGAMENTO &gt; BOLETO e preencha os seguintes dados:</p>
 
 <ul>
 <li><strong>Habilitar &ldquo;frase&rdquo; do boleto</strong>: Inativo</li>
 <li><strong>Habilitar &ldquo;referência&rdquo; do boleto</strong>: Ativo</li>
 <li><strong>Apresentar Agência e Conta</strong>: Inativo</li>
 <li><strong>Vencimento</strong>: 5 dias</li>
-<li><strong>URL de notificação</strong>: https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost</li>
-<li>No campo <strong>Chave de Segurança</strong> clique em &ldquo;<strong>Gerar chave de segurança</strong>&rdquo;</li>
-<li><strong>Endereço de IP da loja</strong>  (numérico)</li>
-</ul></li>
-</ol>
+</ul>
 
 <p><img alt="Boleto Bradesco" src="images/boleto-bradesco-passo-2.png" /></p>
 
 <aside class="notice"><strong>Obs:</strong> O vencimento deverá ser o mesmo configurado no Checkout Cielo.</aside>
 
-<p>Para os campos de <strong>URL de resposta, URL de falha e URL de redirecionamento</strong>, inserir o seguinte link: <code class="prettyprint">https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost</code></p>
-
-<p>2.Em cada um dos três Paramêtros a seguir, preencher com o Parâmetro de Comunicação abaixo:</p>
-
 <ul>
-<li><strong>Parâmetro de notificação</strong>:</li>
-<li><strong>Parâmetro de confirmação</strong>:</li>
-<li><strong>Parâmetro de falha</strong>:</li>
+<li><strong>URL de notificação</strong>: https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost</li>
+<li>No campo <strong>Chave de Segurança</strong> clique em &ldquo;<strong>Gerar chave de segurança</strong>&rdquo;</li>
+<li><strong>Endereço de IP da loja</strong>  (numérico)</li>
+<li>Para os campos de <strong>URL de resposta, URL de falha e URL de redirecionamento</strong>, inserir o seguinte link: <code class="prettyprint">https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost</code></li>
 </ul>
 
 <p><img alt="Boleto Bradesco" src="images/boleto-bradesco-passo-3.png" /></p>
 
+<p><strong>2.</strong> Em cada um dos três Paramêtros a seguir, preencher com o Parâmetro de Comunicação abaixo:</p>
+
 <ul>
+<li><strong>Parâmetro de notificação</strong>:
+
+<ul>
+<li><code class="prettyprint">numOrder=[%lid_m%]&amp;merchantid=[%merchantid%]&amp;cod=[%errorcod%]&amp;cctype=[%cctype%]&amp;ccname=[%ccname%]&amp;ccemail=[%ccemail%]&amp;numparc=[%numparc%]&amp;valparc=[%valparc%]&amp;valtotal=[%valtotal%]&amp;prazo=[%prazo%]&amp;comb=[%comb%]&amp;assinatura=[%assinatura%]&amp;</code></li>
+</ul></li>
+<li><strong>Parâmetro de confirmação</strong>:
+
+<ul>
+<li><code class="prettyprint">numOrder=[%lid_m%]&amp;merchantid=[%merchantid%]&amp;cod=[%errorcod%]&amp;cctype=[%cctype%]&amp;ccname=[%ccname%]&amp;ccemail=[%ccemail%]&amp;numparc=[%numparc%]&amp;valparc=[%valparc%]&amp;valtotal=[%valtotal%]&amp;prazo=[%prazo%]&amp;comb=[%comb%]&amp;assinatura=[%assinatura%]&amp;</code></li>
+</ul></li>
+<li><strong>Parâmetro de falha</strong>:
+
+<ul>
+<li><code class="prettyprint">numOrder=[%lid_m%]&amp;merchantid=[%merchantid%]&amp;cod=[%errorcod%]&amp;cctype=[%cctype%]&amp;ccname=[%ccname%]&amp;ccemail=[%ccemail%]&amp;numparc=[%numparc%]&amp;valparc=[%valparc%]&amp;valtotal=[%valtotal%]&amp;prazo=[%prazo%]&amp;comb=[%comb%]&amp;assinatura=[%assinatura%]&amp;</code></li>
+</ul></li>
 <li><strong>Paramêtro de Comunicação</strong>
-<code class="prettyprint">numOrder=[%lid_m%]&amp;merchantid=[%merchantid%]&amp;cod=[%errorcod%]&amp;cctype=[%cctype%]&amp;ccname=[%ccname%]&amp;ccemail=[%ccemail%]&amp;numparc=[%numparc%]&amp;valparc=[%valparc%]&amp;valtotal=[%valtotal%]&amp;prazo=[%prazo%]&amp;comb=[%comb%]&amp;assinatura=[%assinatura%]&amp;</code></li>
+
+<ul>
+<li><code class="prettyprint">numOrder=[%lid_m%]&amp;merchantid=[%merchantid%]&amp;cod=[%errorcod%]&amp;cctype=[%cctype%]&amp;ccname=[%ccname%]&amp;ccemail=[%ccemail%]&amp;numparc=[%numparc%]&amp;valparc=[%valparc%]&amp;valtotal=[%valtotal%]&amp;prazo=[%prazo%]&amp;comb=[%comb%]&amp;assinatura=[%assinatura%]&amp;</code></li>
+</ul></li>
 </ul>
 
 <p><img alt="Boleto Bradesco" src="images/boleto-bradesco-passo-4.png" /></p>
 
 <aside class="notice"><strong>Obs:</strong> Não podem existir espaços ou quebras de texto nos parâmetros expostos acima.</aside>
 
-<p>5.Clique no botão &ldquo;<strong>Gravar todas as configurações realizadas</strong>&rdquo;</p>
+<p><strong>3.</strong> Clique no botão &ldquo;<strong>Gravar todas as configurações realizadas</strong>&rdquo;</p>
 
-<p>Concluída essa etapa, você deve:</p>
+<h3 id="concluída-essa-etapa,-você-deve:">Concluída essa etapa, você deve:</h3>
 
-<ol>
-<li>Encaminhar um e-mail para Cielo e-Commerce <a href="cieloecommerce@cielo.com.br">mailto:cieloecommerce@cielo.com.br</a> com os seguintes dados:
+<p><strong>1.</strong> Encaminhar um e-mail para Cielo e-Commerce <a href="cieloecommerce@cielo.com.br">mailto:cieloecommerce@cielo.com.br</a> com os seguintes dados:</p>
 
 <ul>
 <li><strong>Agência</strong>: 0000</li>
@@ -189,16 +200,13 @@
 <ul>
 <li>Exemplo de Chave de Segurança: <code class="prettyprint">ZDE50B48D41D59BDD1562CC2A48546454ZC149308CBD283E0E49210C57958A6A38A068A3ZZA8B075095A1B9E1DEAZB64BF1682C5610ZC8285DC8630FA6E300FA00B9D43054C84ACA958ZCFB435CF5A27ZC440637777EBAFEED1BCZDCA82D5778B266B3BB4E90774302D56A0C7EDZZ1A532A51F7A889DA83AEFA08CA4E91A08Z2</code></li>
 </ul></li>
-</ul></li>
-</ol>
+</ul>
 
 <aside class="notice"><strong>Obs:</strong> A afiliação do Bradesco está localizada no topo do gerenciador web.</aside>
 
 <p><img alt="Boleto Bradesco" src="images/boleto-bradesco-passo-5.png" /></p>
 
-<ol>
-<li>O Cielo e-Commerce confirmará, em até 3 dias, a inclusão do boleto como forma de pagamento da sua loja online.</li>
-</ol>
+<p><strong>2.</strong> O Cielo e-Commerce confirmará, em até 3 dias, a inclusão do boleto como forma de pagamento da sua loja online.</p>
 
 <h2 id="banco-do-brasil">Banco do Brasil</h2>
 
