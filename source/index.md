@@ -92,7 +92,7 @@ Para configurar o Boleto:
 
 ### Concluída essa etapa, você deve:
 
-**1.** Encaminhar um e-mail para Cielo e-Commerce [mailto:cieloecommerce@cielo.com.br](cieloecommerce@cielo.com.br) com os seguintes dados:
+**1.** Encaminhar um e-mail para Cielo e-Commerce [cieloecommerce@cielo.com.br](mailto:cieloecommerce@cielo.com.br) com os seguintes dados:
 
 * **Agência**: 0000
 * **Conta**: 0000-0
@@ -119,7 +119,7 @@ Os critérios para habilitar a opção de Boleto Banco do Brasil são:
 Para solicitar o Boleto Banco do Brasil, você precisa:
 
 1. Contatar o banco/agência e fazer a solicitação de boleto sem registro carteira 18. Esse passo envolve assinatura de contrato com o Banco
-2. Encaminhar um e-mail para Cielo e-Commerce [mailto:cieloecommerce@cielo.com.br](cieloecommerce@cielo.com.br) com os seguintes dados:
+2. Encaminhar um e-mail para Cielo e-Commerce [cieloecommerce@cielo.com.br](mailto:cieloecommerce@cielo.com.br) com os seguintes dados:
     * **Agência**: 0000
     * **Conta Corrente**: 00000-0
     * **Convênio**: 0000000
@@ -148,7 +148,7 @@ Para solicitar o Boleto Banco do Brasil, você precisa:
     * Em “*URL do gerenciador da loja*”: https://www.pagador.com.br/admin/login.asp
     * Na última opção:  `capture now (1001)`.
 4. Enviar o e-mail abaixo para a Scopus solicitando a homologação
-    * **Para**: [mailto:homologacao@scopus.com.br](homologacao@scopus.com.br); [mailto:kit@scopus.com.br](kit@scopus.com.br)
+    * **Para**: [homologacao@scopus.com.br](mailto:homologacao@scopus.com.br); [kit@scopus.com.br](mailto:kit@scopus.com.br)
     * **Assunto**: Dados do ambiente de produção Débito SPS
     * **Corpo do email**:<br />Prezados,<br /><br />Favor liberar o cliente abaixo no ambiente de produção:<br /><br />Razão Social: XXXXX<br />CNPJ: XXXX<br />Nome da loja: XXXXX<br />Número da loja: XXXXX<br />Manager: XXXXX<br />Senha: XXXXXXX<br />URL da Loja: https://www.XXXXXXXXX<br />Meio de Pagamento para Homologar: Débito em Conta<br />
 5. Receber os dados de produção:
