@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Procedures for enable Payment methods</title>
+
+    <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
+    <link href="https://www.cielo.com.br/wps/contenthandler/!ut/p/digest!3SvhW8ACOLyj_90YHxPhKQ/war/cielo-tema/themes/estatico/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="javascripts/all.js" type="text/javascript"></script>
+
+    <script async src='//www.google-analytics.com/analytics.js'></script>
+    <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+
+    ga('create', 'UA-8516386-7', {'cookieDomain': 'auto', 'alwaysSendReferrer': true});
+    ga('create', 'UA-31855766-1', {'name': 'iMasters', 'cookieDomain': 'auto', 'alwaysSendReferrer': true});
+
+    ga("set", "transport", "beacon");
+    ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="english">
+    <a href="#" id="nav-button">
+        <span>
+            NAV
+            <img src="images/navbar.png" />
+        </span>
+    </a>
+    <div class="tocify-wrapper">
+        <ul class="languages">
+            <li class="english"><a href="english.html" title="English version">English version</a></li>
+            <li class="portuguese"><a href="index.html" title="Versão em português">Versão em português</a></li>
+        </ul>
+        <img src="images/logo.png" />
+        <div class="search">
+            <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+        <div id="toc">
+        </div>
+        <h2 class="toc-footer-title">Materiais complementares</h2>
+        <ul class="toc-footer">
+            <li><a href='/Checkout-Cielo/english.html'>Manual Checkout Cielo</a></li>
+            <li><a href='/Checkout-FAQ/'>Perguntas Frequêntes</a></li>
+        </ul>
+        <div class="links-footer">
+            <ul class="link-list">
+                <li class="cielo"><a href="https://www.cielo.com.br/ecommerce">Cielo</a></li>
+                <li class="github"><a href="https://github.com/developercielo">Cielo</a></li>
+                <li class="desenvolvedores"><a href="https://www.cielo.com.br/desenvolvedores">Cielo</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="page-wrapper">
+            <div class="content no-dark-box">
+                <h1 id="procedures-for-enable-payment-methods">Procedures for enable Payment methods</h1>
+
+<h2 id="about-this-manual">About this Manual</h2>
+
+<p>The manual aims to guide the retailer in hiring the BOLETO and ONLINE DEBT payment method available on CIELO CHECKOUT.</p>
+
+<h2 id="history-of-versions">History of Versions</h2>
+
+<ul>
+<li><strong>1.4</strong> - 08/06/2015
+
+<ul>
+<li>Inclusion of BOLETO SPS Bradesco.</li>
+</ul></li>
+<li><strong>1.3</strong> - 03/24/2015
+
+<ul>
+<li>Inclusion of signature field in Online Debit Bradesco.</li>
+</ul></li>
+<li><strong>1.2</strong> - 01/09/2015
+
+<ul>
+<li>Review of items requested to generate boleto</li>
+<li>Upgrade of integrated solution name becomes Cielo Checkout</li>
+</ul></li>
+<li><strong>1.1</strong> - 08/20/2014
+
+<ul>
+<li>Update of Bradesco Boleto data (IP) and URL debit (BB)</li>
+</ul></li>
+<li><strong>1.0</strong> - 08/07/2014
+
+<ul>
+<li>Initial version</li>
+</ul></li>
+</ul>
+
+<h2 id="boleto">Boleto</h2>
+
+<p>Using CIELO Checkout, the retailer can accept Boleto issued by Bradesco and Banco do Brasil banks.</p>
+
+<h2 id="online-debit-(electronic-transfer)">Online debit (Electronic Transfer)</h2>
+
+<p>In this payment method the data is entered directly in the Bank&rsquo;s environment, all banks have a policy to redirect these transactions to their environment, making the transaction more safe.</p>
+
+<h1 id="boleto-qualification">Boleto qualification</h1>
+
+<h2 id="bradesco">Bradesco</h2>
+
+<p>The criteria for using Boleto Bradesco Eletronic Com. are:</p>
+
+<ul>
+<li>Be Corporate accountholder Bradesco;</li>
+<li>Contact Bradesco account manager to sign specific Electronic Commerce contract.</li>
+</ul>
+
+<p>To order/configure Boleto Bradesco, you will need:</p>
+
+<ol>
+<li>Contact the bank/branch and make the request for boleto with registration wallet 26. This step involves contract signature with the Bank.</li>
+<li>Receive an e-mail from the Bank (Scopus Kit) with manager URL, e-mail, login and password to access Bradesco environment.You must access Bradesco environment using manager URL. See examples sent in email (Scopus Kit)
+
+<ul>
+<li><strong>Manager URL</strong> - (https://meiosdepagamentobradesco.com.br/gerenciador/login.jsp)</li>
+<li><strong>E-mail Login</strong></li>
+<li><strong>Password</strong></li>
+</ul></li>
+</ol>
+
+<p>To configure Boleto:</p>
+
+<p><strong>1.</strong> At Bradesco environment, access the tabs SETTINGS &gt; PAYMENT&rsquo;S METHOD &gt; BOLETO and fill in the following data:</p>
+
+<ul>
+<li><strong>Enable Boleto &ldquo;sentence&rdquo;</strong>: Inactive</li>
+<li><strong>Enable Boleto &ldquo;reference&rdquo;</strong>: Active</li>
+<li><strong>Presenting Agency and Account</strong>: Inactive</li>
+<li><strong>Expiration date</strong>: 5 days</li>
+</ul>
+
+<p><img alt="Boleto Bradesco" src="images/boleto-bradesco-passo-2.png" /></p>
+
+<aside class="notice"><strong>Note:</strong> The expiration date must be in the same Cielo Checkout.</aside>
+
+<ul>
+<li><strong>Notification URL</strong>: https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost</li>
+<li>In the <strong>Security Key field</strong> click on <strong>&ldquo;Generate security key&rdquo;</strong></li>
+<li><strong>Store IP address (numeric)</strong></li>
+<li>For the response <strong>URL fields, URL of failure and URL of redirection</strong>, insert the following link: https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost</li>
+</ul>
+
+<p><img alt="Boleto Bradesco" src="images/boleto-bradesco-passo-3.png" /></p>
+
+<p><strong>2.</strong> In each three parameters following, complete with the Communication Parameter below:</p>
+
+<ul>
+<li><strong>Notification Parameter</strong>:
+
+<ul>
+<li><code class="prettyprint">numOrder=[%lid_m%]&amp;merchantid=[%merchantid%]&amp;cod=[%errorcod%]&amp;cctype=[%cctype%]&amp;ccname=[%ccname%]&amp;ccemail=[%ccemail%]&amp;numparc=[%numparc%]&amp;valparc=[%valparc%]&amp;valtotal=[%valtotal%]&amp;prazo=[%prazo%]&amp;comb=[%comb%]&amp;assinatura=[%assinatura%]&amp;</code></li>
+</ul></li>
+<li><strong>Confirmation Parameter</strong>:
+
+<ul>
+<li><code class="prettyprint">numOrder=[%lid_m%]&amp;merchantid=[%merchantid%]&amp;cod=[%errorcod%]&amp;cctype=[%cctype%]&amp;ccname=[%ccname%]&amp;ccemail=[%ccemail%]&amp;numparc=[%numparc%]&amp;valparc=[%valparc%]&amp;valtotal=[%valtotal%]&amp;prazo=[%prazo%]&amp;comb=[%comb%]&amp;assinatura=[%assinatura%]&amp;</code></li>
+</ul></li>
+<li><strong>Fault Parameters</strong>:
+
+<ul>
+<li><code class="prettyprint">numOrder=[%lid_m%]&amp;merchantid=[%merchantid%]&amp;cod=[%errorcod%]&amp;cctype=[%cctype%]&amp;ccname=[%ccname%]&amp;ccemail=[%ccemail%]&amp;numparc=[%numparc%]&amp;valparc=[%valparc%]&amp;valtotal=[%valtotal%]&amp;prazo=[%prazo%]&amp;comb=[%comb%]&amp;assinatura=[%assinatura%]&amp;</code></li>
+</ul></li>
+<li><strong>Parameter Communication</strong>:
+
+<ul>
+<li><code class="prettyprint">numOrder=[%lid_m%]&amp;merchantid=[%merchantid%]&amp;cod=[%errorcod%]&amp;cctype=[%cctype%]&amp;ccname=[%ccname%]&amp;ccemail=[%ccemail%]&amp;numparc=[%numparc%]&amp;valparc=[%valparc%]&amp;valtotal=[%valtotal%]&amp;prazo=[%prazo%]&amp;comb=[%comb%]&amp;assinatura=[%assinatura%]&amp;</code></li>
+</ul></li>
+</ul>
+
+<p><img alt="Boleto Bradesco" src="images/boleto-bradesco-passo-4.png" /></p>
+
+<aside class="notice"><strong>Note</strong>: There can be no spaces or text breaks in exposed above parameters.</aside>
+
+<p><strong>3.</strong> Click at the buttom <strong>&ldquo;Save all settings made&rdquo;</strong></p>
+
+<h3 id="after-complete-this-step,-you-must:">After complete this step, you must:</h3>
+
+<p><strong>1.</strong> Send an email to Cielo e-Commerce <a href="mailto:cieloecommerce@cielo.com.br">cieloecommerce@cielo.com.br</a> with the following data:</p>
+
+<ul>
+<li><strong>Agency:</strong> 0000</li>
+<li><strong>Account:</strong> 0000-0</li>
+<li><strong>Agreement:</strong> 000000</li>
+<li><strong>Wallet:</strong> 26 - WITH REGISTRATION</li>
+<li><strong>Expiry date</strong> (measured in days):</li>
+<li><strong>Conciliation</strong> (Bradesco Membership):
+
+<ul>
+<li>Reconciliation Example: 004601478</li>
+</ul></li>
+<li><strong>Security Key</strong> (Bradesco):
+
+<ul>
+<li>Example of Security Key: <code class="prettyprint">ZDE50B48D41D59BDD1562CC2A48546454ZC149308CBD283E0E49210C57958A6A38A068A3ZZA8B075095A1B9E1DEAZB64BF1682C5610ZC8285DC8630FA6E300FA00B9D43054C84ACA958ZCFB435CF5A27ZC440637777EBAFEED1BCZDCA82D5778B266B3BB4E90774302D56A0C7EDZZ1A532A51F7A889DA83AEFA08CA4E91A08Z2</code></li>
+</ul></li>
+</ul>
+
+<aside class="notice"><strong>Note</strong>: Membership Bradesco is located on top of the web manager.</aside>
+
+<p><img alt="Boleto Bradesco" src="images/boleto-bradesco-passo-5.png" /></p>
+
+<p><strong>2.</strong> Cielo e-commerce will confirm, within 3 days, the inclusion of boleto as payment method in your online store.</p>
+
+<h3 id="banco-do-brasil">Banco do Brasil</h3>
+
+<p>The criteria to enable Banco do Brasil Boleto are:</p>
+
+<ul>
+<li>Be accountholder of Banco do Brasil (Corporative Register);</li>
+</ul>
+
+<p>To request Banco do Brasil Boleto you will need:</p>
+
+<ol>
+<li>Contact the bank/branch and make the boleto request unregistered wallet 18. This step involves signing a contract with the Bank</li>
+<li>Send an email to Cielo e-Commerce cieloecommerce@cielo.com.br with the following data:
+
+<ul>
+<li><strong>Agency</strong>: 0000</li>
+<li><strong>Current Account</strong>: 00000-0</li>
+<li><strong>Agreement</strong>: 0000000</li>
+<li><strong>Expiry date</strong> (measured in days):</li>
+<li><strong>Wallet</strong>: 18 - NO REGISTRATION</li>
+</ul></li>
+</ol>
+
+<aside class="notice">Boleto validity - If the boleto expires on a non-working day, like Saturday, it will be valid until the next business day</aside>
+
+<h1 id="enable-online-debit">Enable Online Debit</h1>
+
+<h2 id="bradesco">Bradesco</h2>
+
+<ol>
+<li>Ask your manager to release Bradesco&rsquo;s online debt (Bradesco SPS). The affiliation will be sent by Bradesco using the pattern:
+
+<ul>
+<li><strong>Agreement approval</strong>: 101xx1</li>
+<li><strong>Login</strong>: dm_cm132</li>
+<li><strong>Password</strong>: 12345678</li>
+<li><strong>Signature</strong>: 8EA7657E-6373-667D-0229-A82E842A3A1A</li>
+</ul></li>
+<li>On receiving this information, the merchant must request an oauthorization of the payment method for Cielo.</li>
+<li>Sign up in MUP test (Bradesco system, the e-mail with Bradesco&rsquo;s data will include the URL to access). Register the information below:
+
+<ul>
+<li><strong>Store&rsquo;s IP address</strong>: 209.134.48.121</li>
+<li>In &ldquo;Purchase confirmation page&rdquo; and &ldquo;Error Page at payment&rdquo;: https://www.pagador.com.br/pagador/recebe.asp</li>
+<li>In &ldquo;URL for reporting for Bradesco Cards&rdquo;: https://www.pagador.com.br/pagador/bradesco/setTransacao.asp</li>
+<li>In The Fields &ldquo;Post to be sent to the store in the notification&rdquo;, &ldquo;Post to be sent to the store in order confirmation&rdquo; and &ldquo;Post to send to the store in the authorization failure&rdquo;:
+
+<ul>
+<li><strong>Add</strong>: <code class="prettyprint">numOrder=[%lid_m%]&amp;merchantid=[%merchantid%]&amp;cod=[%errorcod%]&amp;cctype=[%cctype%]&amp;ccname=[%ccname%]&amp;ccemail=[%ccemail%]&amp;numparc=[%numparc%]&amp;valparc=[%valparc%]&amp;valtotal=[%valtotal%]&amp;prazo=[%prazo%]&amp;tipopagto=[%tipopagto%]&amp;assinatura=[%assinatura%]</code></li>
+</ul></li>
+<li>In &ldquo;Incoming URL in the store&rdquo;: Website address</li>
+<li>In &ldquo;URL Store manager&rdquo;: https://www.pagador.com.br/admin/login.asp</li>
+<li>The last option: Capture now (1001).</li>
+</ul></li>
+<li>Send your email below to Scopus requesting approval/homologation
+
+<ul>
+<li><strong>To</strong>: <a href="mailto:homologacao@scopus.com.br">homologacao@scopus.com.br</a>; <a href="mailto:kit@scopus.com.br">kit@scopus.com.br</a></li>
+<li><strong>Subject</strong>: Data of production environment Debit SPS</li>
+<li><strong>Body of e-mail</strong>:<br />Dear,<br /><br />Please release the customer below for production environment:<br /><br />Company Name: XXXXX<br />CNPJ: XXXX<br />Store Name: XXXXX<br />Store Number: XXXXX<br />Manager: XXXXX<br />Password: XXXXXXX<br />Store URL: https: //www.XXXXXXXXX<br />Payment methods to ratify: Debit Account</li>
+</ul></li>
+<li>Receive production data:
+
+<ul>
+<li>Bradesco will send the membership using the pattern:
+
+<ul>
+<li><strong>Production Agreement</strong>: 101xx1</li>
+<li><strong>Login</strong>: dm_cm132</li>
+<li><strong>Password</strong>: 12345678</li>
+<li><strong>URL for testing</strong>: http://mup.comercioeletronico.com.br/sepsManager/senha.asp?loja=XXXX</li>
+</ul></li>
+</ul></li>
+<li>Sign up for MUP Production, the same information from step 3.</li>
+<li>Ask Cielo to update the Agreement number for production number that has received in step 5.</li>
+</ol>
+
+<h2 id="banco-do-brasil">Banco do Brasil</h2>
+
+<p>Ask your bank manager to release the agreement of online debit via Internet (Banco do Brasil Electronic Commerce - BBPAG) and the registration of Communication URL with Cielo.</p>
+
+<ul>
+<li><strong>Communication URL</strong>: https://www.pagador.com.br</li>
+</ul>
+
+<p>The manager must register this URL at the time of release the agreement.</p>
+
+<aside class="warning">If you do not register it will not operate.</aside>
+
+<ul>
+<li><strong>Example of agreement</strong>: Agreement: 000000</li>
+</ul>
+
+            </div>
+        </div>
+    </body>
+    </html>
