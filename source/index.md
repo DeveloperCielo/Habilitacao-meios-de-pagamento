@@ -1,5 +1,5 @@
 ---
-title: Procedimentos para Habilitação dos Meios de Pagamento
+title: Habilitação dos Meios de Pagamento
 
 toc_footers:
   - <a href='/Checkout-Cielo/'>Manual Checkout Cielo</a>
@@ -8,7 +8,7 @@ toc_footers:
 search: true
 ---
 
-# Procedimentos para Habilitação dos Meios de Pagamento
+# Habilitação dos Meios de Pagamento
 
 ## Sobre este Manual
 
