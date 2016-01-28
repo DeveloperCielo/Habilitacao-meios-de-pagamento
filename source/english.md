@@ -110,7 +110,7 @@ To configure Boleto:
 
 **2.** Cielo e-commerce will confirm, within 3 days, the inclusion of boleto as payment method in your online store.
 
-### Banco do Brasil
+## Banco do Brasil
 
 The criteria to enable Banco do Brasil Boleto are:
 
