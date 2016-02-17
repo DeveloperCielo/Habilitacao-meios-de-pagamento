@@ -14,7 +14,7 @@ search: true
 
 The manual aims to guide the retailer in hiring the BOLETO and ONLINE DEBT payment method available on CIELO CHECKOUT.
 
-## History of Versions
+## Changelog
 
 * **1.4** - 08/06/2015
     * Inclusion of BOLETO SPS Bradesco.
