@@ -95,7 +95,7 @@ Para configurar o Boleto:
 **1.** Encaminhar um e-mail para Cielo e-Commerce [cieloecommerce@cielo.com.br](mailto:cieloecommerce@cielo.com.br) com os seguintes dados:
 
 * **Agência**: 0000
-* **Conta**: 0000-0
+* **Conta**: 0000000 (7 dígitos sem o dígito verificador, mantendo os zeros à esquerda conforme exemplo: 0001111
 * **Convênio**: 000000
 * **Carteira**: 26 – COM REGISTRO
 * **Vencimento** (contado em dias):
