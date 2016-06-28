@@ -95,7 +95,7 @@ To configure Boleto:
 **1.** Send an email to Cielo e-Commerce [cieloecommerce@cielo.com.br](mailto:cieloecommerce@cielo.com.br) with the following data:
 
 * **Agency:** 0000
-* **Account:** 0000-0
+* **Account:** 0000000 (7 dígitos sem o dígito verificador, mantendo os zeros à esquerda conforme exemplo: 0001111
 * **Agreement:** 000000
 * **Wallet:** 26 - WITH REGISTRATION
 * **Expiry date** (measured in days):
