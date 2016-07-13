@@ -3,6 +3,7 @@ title: Habilitação dos Meios de Pagamento
 
 toc_footers:
   - <a href='/Checkout-Cielo/'>Manual Checkout Cielo</a>
+  - <a href='/Webservice-3.0'>Manual API 3.0</a>
   - <a href='/Checkout-FAQ/'>Perguntas Frequêntes</a>
 
 search: true
@@ -12,7 +13,7 @@ search: true
 
 ## Sobre este Manual
 
-Este manual tem como objetivo orientar o LOJISTA nas contratações dos meios de pagamento BOLETO e DÉBITO ONLINE disponíveis no CHECKOUT CIELO.
+Este manual tem como objetivo orientar o LOJISTA nas contratações dos meios de pagamento BOLETO e DÉBITO ONLINE disponíveis no CHECKOUT CIELO e na API 3.0.
 
 ## Histórico de versões
 
@@ -30,7 +31,7 @@ Este manual tem como objetivo orientar o LOJISTA nas contratações dos meios de
 
 ## Boleto
 
-Pelo CHECKOUT CIELO o lojista pode aceitar pagamentos com boletos emitidos pelos bancos: Bradesco e Banco do Brasil.
+O lojista pode aceitar pagamentos com boletos emitidos pelos bancos: Bradesco e Banco do Brasil.
 
 ## Débito online (Transferência Eletrônica)
 
