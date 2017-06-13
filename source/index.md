@@ -13,10 +13,12 @@ search: true
 
 ## Sobre este Manual
 
-Este manual tem como objetivo orientar o LOJISTA nas contratações dos meios de pagamento BOLETO e DÉBITO ONLINE disponíveis no CHECKOUT CIELO e na API 3.0.
+Este manual tem como objetivo orientar o LOJISTA nas contratações dos meios de pagamento BOLETO e DÉBITO ONLINE disponíveis no CHECKOUT CIELO e na API Cielo Ecommerce.
 
 ## Histórico de versões
 
+* **1.5** - 30/03/2016
+    * Inclusão do Boleto SPS Bradesco Registrado e nova Transferência Online Bradesco.
 * **1.4** - 06/08/2015
     * Inclusão do Boleto SPS Bradesco.
 * **1.3** - 24/03/2015
@@ -49,14 +51,27 @@ Os critérios para utilizar o Boleto Bradesco Com. Eletrônico são:
 Para solicitar/configurar o Boleto Bradesco, você precisa:
 
 1. Contatar o banco/agência e fazer a solicitação de boleto com registro carteira 26. Esse passo envolve assinatura de contrato com o Banco.
-2. Receber um e-mail do Banco (Kit Scopus) com URL do gerenciador, e-mail de login e senha de acesso ao ambiente Bradesco.  Você deve acessar o ambiente Bradesco pela URL do gerenciador. Veja os exemplos enviados no email (Kit Scopus):
+2. Receber um e-mail do Banco (Kit Scopus) com URL do gerenciador, e-mail de login e senha de acesso ao ambiente Bradesco. Caso o ambiente recebido seja de homologação, poderá retornar o email solicitando dados de Produção CIELO.
+3. Você deve acessar o ambiente Bradesco pela URL do gerenciador. Veja os exemplos enviados no email (Kit Scopus):
     * **URL do gerenciador** - (https://meiosdepagamentobradesco.com.br/gerenciador/login.jsp)
     * **E-mail de Login**
     * **Senha de acesso**
 
-Para configurar o Boleto:
+**Gerar chave de segurança**:
 
-**1.** No ambiente Bradesco, acesse as abas CONFIGURAÇÕES > MEIOS DE PAGAMENTO > BOLETO e preencha os seguintes dados:
+No ambiente Bradesco, acesse as abas CONFIGURAÇÕES > MEIOS DE PAGAMENTO > BOLETO e preencha os seguintes dados:
+
+Insira uma palavra secreta e clique em gerar nova chave de segurança
+
+![Boleto Bradesco](/images/boleto-bradesco-ChaveSeg.png)
+
+**Habilitação Boleto Bradesco**
+
+**1.** Na aba Boleto, realize as seguintes configurações:
+
+**URL de notificação:** https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost
+
+![Boleto Bradesco](/images/boleto-bradesco-URl_Notificação_boleto.png)
 
 * **Habilitar "frase" do boleto**: Inativo
 * **Habilitar "referência" do boleto**: Ativo
@@ -100,12 +115,12 @@ Para configurar o Boleto:
 * **Convênio**: 000000
 * **Carteira**: 26 – COM REGISTRO
 * **Vencimento** (contado em dias):
-* **Conciliação** (Afiliação do Bradesco):
+* **Conciliação** (Afiliação/merchantID do Bradesco):
    * Exemplo de Conciliação: 004601478
 * **Chave de Segurança** (Bradesco):
-   * Exemplo de Chave de Segurança: `ZDE50B48D41D59BDD1562CC2A48546454ZC149308CBD283E0E49210C57958A6A38A068A3ZZA8B075095A1B9E1DEAZB64BF1682C5610ZC8285DC8630FA6E300FA00B9D43054C84ACA958ZCFB435CF5A27ZC440637777EBAFEED1BCZDCA82D5778B266B3BB4E90774302D56A0C7EDZZ1A532A51F7A889DA83AEFA08CA4E91A08Z2`
+   * Exemplo de Chave de Segurança: `ka7ALjlTosozzxgNYMLu6hIPYLrii1BljN6qvchYtXM`
 
-<aside class="notice"><strong>Obs:</strong> A afiliação do Bradesco está localizada no topo do gerenciador web.</aside>
+<aside class="notice"><strong>Obs:</strong> A afiliação/merchantID do Bradesco está localizada no topo do gerenciador web.</aside>
 
 ![Boleto Bradesco](/images/boleto-bradesco-passo-5.png)
 
@@ -131,8 +146,30 @@ Para solicitar o Boleto Banco do Brasil, você precisa:
 
 # Habilitação Débito online
 
-## Bradesco
 
+
+
+## Bradesco
+**Nova Transferência online**
+
+Para configurar a nova transferência online, você precisa:
+
+1. Acessar o ambiente Bradesco pela URL do gerenciador. Veja os exemplos enviados no email (Kit Scopus):
+
+    * **URL do gerenciador** - (https://meiosdepagamentobradesco.com.br/gerenciador/login.jsp)
+    * **E-mail de Login**
+    * **Senha de acesso**
+    
+2. Na aba Transferência, realize as seguintes configurações:
+
+    * **URL de notificação:** https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost
+    * **Endereço de IP da loja** (numérico)
+    * **Para os campos URL de Resposta e URL de Falha, inserir o seguinte link:** https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost 
+
+![Boleto Bradesco](/images/Novo_debito_online.png)
+
+
+**Modelo Antigo**
 1. Solicitar ao seu gerente a liberação do débito online do Bradesco (SPS Bradesco). A afiliação será enviada pelo Bradesco no padrão:
     * **Convênio de homologação**: 101xx1
     * **login**: dm_cm132
