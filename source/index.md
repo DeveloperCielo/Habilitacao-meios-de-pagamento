@@ -121,11 +121,24 @@ Para solicitar o Boleto Banco do Brasil, você precisa:
 
 1. Contatar o banco/agência e fazer a solicitação de boleto sem registro carteira 18. Esse passo envolve assinatura de contrato com o Banco
 2. Encaminhar um e-mail para Cielo e-Commerce [cieloecommerce@cielo.com.br](mailto:cieloecommerce@cielo.com.br) com os seguintes dados:
-    * **Agência**: 0000
-    * **Conta Corrente**: 00000-0
-    * **Convênio**: 0000000
-    * **Vencimento** (contado em dias):
-    * **Carteira**: 18 - SEM REGISTRO
+
+**Boleto Não registrado (Carteira 18)**
+
+* **Agência**: 0000
+* **Conta Corrente**: 00000-0
+* **Convênio**: 0000000
+* **Vencimento** (contado em dias):
+* **Carteira**: 18 - SEM REGISTRO
+
+
+**Boleto Registrado (Carteira 18)**
+
+* **Agência:** código da agência (com traço).
+* **Conta:** Conta corrente (com traço).
+* **Carteira:** (Não é necessário para este boleto)
+* **Conciliação:** (Número do convênio de cobrança) - 7 Dígitos
+* **Convênio** (Convênio de comércio eletrônico) - 6 Dígitos
+
 
 <aside class="notice">Validade do Boleto – Caso o boleto expire em um dia não útil, como sábado, ele será válido até o próximo dia útil</aside>
 
@@ -144,7 +157,9 @@ Para solicitar o Boleto Banco do Brasil, você precisa:
     * Em “*Página de confirmação de compra*” e “*Página de falha no pagamento*”: https://www.pagador.com.br/pagador/recebe.asp
     * Em “*URL para notificação p/ Cartões Bradesco*”: https://www.pagador.com.br/pagador/bradesco/setTransacao.asp
     * Nos Campos “*Post a ser enviado para a loja na notificação*”, “*Post a ser enviado para a loja na confirmação de compra*” e “*Post a ser enviado para a loja na falha da autorização*”:
-        * **Adicionar**: `numOrder=[%lid_m%]&merchantid=[%merchantid%]&cod=[%errorcod%]&cctype=[%cctype%]&ccname=[%ccname%]&ccemail=[%ccemail%]&numparc=[%numparc%]&valparc=[%valparc%]&valtotal=[%valtotal%]&prazo=[%prazo%]&tipopagto=[%tipopagto%]&assinatura=[%assinatura%]`
+
+* **Adicionar**: `numOrder=[%lid_m%]&merchantid=[%merchantid%]&cod=[%errorcod%]&cctype=[%cctype%]&ccname=[%ccname%]&ccemail=[%ccemail%]&numparc=[%numparc%]&valparc=[%valparc%]&valtotal=[%valtotal%]&prazo=[%prazo%]&tipopagto=[%tipopagto%]&assinatura=[%assinatura%]`
+
     * Em “*URL de entrada na loja*”: endereço do site
     * Em “*URL do gerenciador da loja*”: https://www.pagador.com.br/admin/login.asp
     * Na última opção:  `capture now (1001)`.
