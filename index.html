@@ -225,7 +225,10 @@
 
 <ol>
 <li>Contatar o banco/agência e fazer a solicitação de boleto sem registro carteira 18. Esse passo envolve assinatura de contrato com o Banco</li>
-<li>Encaminhar um e-mail para Cielo e-Commerce <a href="mailto:cieloecommerce@cielo.com.br">cieloecommerce@cielo.com.br</a> com os seguintes dados:
+<li>Encaminhar um e-mail para Cielo e-Commerce <a href="mailto:cieloecommerce@cielo.com.br">cieloecommerce@cielo.com.br</a> com os seguintes dados:</li>
+</ol>
+
+<p><strong>Boleto Não registrado (Carteira 18)</strong></p>
 
 <ul>
 <li><strong>Agência</strong>: 0000</li>
@@ -233,8 +236,17 @@
 <li><strong>Convênio</strong>: 0000000</li>
 <li><strong>Vencimento</strong> (contado em dias):</li>
 <li><strong>Carteira</strong>: 18 - SEM REGISTRO</li>
-</ul></li>
-</ol>
+</ul>
+
+<p><strong>Boleto Registrado (Carteira 18)</strong></p>
+
+<ul>
+<li><strong>Agência:</strong> código da agência (com traço).</li>
+<li><strong>Conta:</strong> Conta corrente (com traço).</li>
+<li><strong>Carteira:</strong> (Não é necessário para este boleto)</li>
+<li><strong>Conciliação:</strong> (Número do convênio de cobrança) - 7 Dígitos</li>
+<li><strong>Convênio</strong> (Convênio de comércio eletrônico) - 6 Dígitos</li>
+</ul>
 
 <aside class="notice">Validade do Boleto – Caso o boleto expire em um dia não útil, como sábado, ele será válido até o próximo dia útil</aside>
 
@@ -258,23 +270,26 @@
 <li><strong>Endereço IP da loja</strong>: 209.134.48.121</li>
 <li>Em “<em>Página de confirmação de compra</em>” e “<em>Página de falha no pagamento</em>”: https://www.pagador.com.br/pagador/recebe.asp</li>
 <li>Em “<em>URL para notificação p/ Cartões Bradesco</em>”: https://www.pagador.com.br/pagador/bradesco/setTransacao.asp</li>
-<li>Nos Campos “<em>Post a ser enviado para a loja na notificação</em>”, “<em>Post a ser enviado para a loja na confirmação de compra</em>” e “<em>Post a ser enviado para a loja na falha da autorização</em>”:
+<li>Nos Campos “<em>Post a ser enviado para a loja na notificação</em>”, “<em>Post a ser enviado para a loja na confirmação de compra</em>” e “<em>Post a ser enviado para a loja na falha da autorização</em>”:</li>
+</ul></li>
+</ol>
 
 <ul>
-<li><strong>Adicionar</strong>: <code class="prettyprint">numOrder=[%lid_m%]&amp;merchantid=[%merchantid%]&amp;cod=[%errorcod%]&amp;cctype=[%cctype%]&amp;ccname=[%ccname%]&amp;ccemail=[%ccemail%]&amp;numparc=[%numparc%]&amp;valparc=[%valparc%]&amp;valtotal=[%valtotal%]&amp;prazo=[%prazo%]&amp;tipopagto=[%tipopagto%]&amp;assinatura=[%assinatura%]</code></li>
-</ul></li>
+<li><p><strong>Adicionar</strong>: <code class="prettyprint">numOrder=[%lid_m%]&amp;merchantid=[%merchantid%]&amp;cod=[%errorcod%]&amp;cctype=[%cctype%]&amp;ccname=[%ccname%]&amp;ccemail=[%ccemail%]&amp;numparc=[%numparc%]&amp;valparc=[%valparc%]&amp;valtotal=[%valtotal%]&amp;prazo=[%prazo%]&amp;tipopagto=[%tipopagto%]&amp;assinatura=[%assinatura%]</code></p>
+
+<ul>
 <li>Em “<em>URL de entrada na loja</em>”: endereço do site</li>
 <li>Em “<em>URL do gerenciador da loja</em>”: https://www.pagador.com.br/admin/login.asp</li>
 <li>Na última opção:  <code class="prettyprint">capture now (1001)</code>.</li>
 </ul></li>
-<li>Enviar o e-mail abaixo para a Scopus solicitando a homologação
+<li><p>Enviar o e-mail abaixo para a Scopus solicitando a homologação</p>
 
 <ul>
 <li><strong>Para</strong>: <a href="mailto:homologacao@scopus.com.br">homologacao@scopus.com.br</a>; <a href="mailto:kit@scopus.com.br">kit@scopus.com.br</a></li>
 <li><strong>Assunto</strong>: Dados do ambiente de produção Débito SPS</li>
 <li><strong>Corpo do email</strong>:<br />Prezados,<br /><br />Favor liberar o cliente abaixo no ambiente de produção:<br /><br />Razão Social: XXXXX<br />CNPJ: XXXX<br />Nome da loja: XXXXX<br />Número da loja: XXXXX<br />Manager: XXXXX<br />Senha: XXXXXXX<br />URL da Loja: https://www.XXXXXXXXX<br />Meio de Pagamento para Homologar: Débito em Conta<br /></li>
 </ul></li>
-<li>Receber os dados de produção:
+<li><p>Receber os dados de produção:</p>
 
 <ul>
 <li>A afiliação será enviada pelo Bradesco no padrão:
@@ -286,9 +301,9 @@
 <li><strong>URL para teste</strong>: http://mup.comercioeletronico.com.br/sepsManager/senha.asp?loja=XXXX</li>
 </ul></li>
 </ul></li>
-<li>Cadastrar no MUP Produção, as mesmas informações do Passo 3.</li>
-<li>Solicitar à Cielo para atualizar o número de Convênio para número de produção que recebeu no passo 5.</li>
-</ol>
+<li><p>Cadastrar no MUP Produção, as mesmas informações do Passo 3.</p></li>
+<li><p>Solicitar à Cielo para atualizar o número de Convênio para número de produção que recebeu no passo 5.</p></li>
+</ul>
 
 <h2 id="banco-do-brasil">Banco do Brasil</h2>
 
